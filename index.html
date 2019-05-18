@@ -12,14 +12,14 @@
           [2, 'Verizon', 0, 2107, 'red'],
           [3, 'Other', 0, 205, 'orange'],          
          
-          [4, 'Lan', 1, 432, 'blue'],          
-          [5, 'Wifi', 1, 403, 'blue'],
+          [4, 'Lan', 1, 432, 'green'],          
+          [5, 'Wifi', 1, 403, 'purple'],
           
-          [6, 'Lan', 2, 650, 'red'],          
-          [7, 'Wifi', 2, 1457, 'red'],
+          [6, 'Lan', 2, 650, 'green'],          
+          [7, 'Wifi', 2, 1457, 'purple'],
           
-          [8, 'Lan', 3, 128, 'orange'],          
-          [9, 'Wifi', 3, 77, 'orange'],
+          [8, 'Lan', 3, 128, 'green'],          
+          [9, 'Wifi', 3, 77, 'purple'],
 
           
           ]);
@@ -203,6 +203,7 @@
         ]);
 
         var options = {
+			colors:['green','purple'],
           hAxis: {
             title: 'Time'
           },
@@ -236,6 +237,7 @@
         ]);
 
         var options = {
+		colors:['green','purple'],
           hAxis: {
             title: 'Time'
           },
@@ -269,6 +271,7 @@
         ]);
 
         var options = {
+		colors:['green','purple'],
           hAxis: {
             title: 'Time'
           },
@@ -301,6 +304,7 @@
         ]);
 
         var options = {
+		colors:['green','purple'],
           hAxis: {
             title: 'Time'
           },
@@ -328,6 +332,7 @@
     ], true);
 
     var options = {
+	colors:['blue','black'],
       legend:'none',
   		candlestick : {
       hollowIsRising : false,
@@ -363,15 +368,16 @@
     ], true);
 
     var options = {
+	colors:['red','black'],
       legend:'none',
   		candlestick : {
       hollowIsRising : false,
       risingColor : {
-      	fill : "blue"
+      	fill : "red"
       	}
       ,
       fallingColor : {
-      	fill : "blue"
+      	fill : "red"
       	}
       },
       hAxis: {
@@ -3861,10 +3867,10 @@
 
         var options = {
           title: 'Download vs. Upload comparison',
-          hAxis: {title: 'Download', minValue: 0, maxValue: 1000},
-          vAxis: {title: 'Upload', minValue: 0, maxValue: 800},
+          hAxis: {title: 'Download (MB/s)', minValue: 0, maxValue: 1000},
+          vAxis: {title: 'Upload (MB/s)', minValue: 0, maxValue: 800},
           legend: 'none',
-          trendlines: { 0: {} }
+          trendlines: { 0: {color:'red',} }
         };
 
         var chart = new google.visualization.ScatterChart(document.getElementById('divCorrelation'));
